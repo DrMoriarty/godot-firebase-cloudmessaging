@@ -1,0 +1,30 @@
+{
+  "name": "firebase-cloud-messaging",
+  "display_name": "Firebase Cloud Messaging",
+  "description": "Firebase Cloud Messaging plugin. Recommended for use with FirebaseAnalytics.",
+  "version": "0.1.0",
+  "godot_version": "3.2.3",
+  "license": "MIT",
+  "url": "https://github.com/DrMoriarty/godot-firebase-cloudmessaging",
+  "category": "misc",
+  "author": {
+    "name": "DrMoriarty",
+    "url": "https://github.com/DrMoriarty",
+    "donate": "https://ko-fi.com/drmoriarty"
+  },
+  "dependencies": [
+    "firebase-core"
+  ],
+  "files": {
+    "scripts": "scripts"
+  },
+  "autoload": {
+    "messaging": "*res://scripts/messaging.gd"
+  },
+  "platform_android": {
+    "files": {
+      "android-plugin/FirebaseCloudMessaging.gdap": "android/plugins/",
+      "android-plugin/build/outputs/aar/FirebaseCloudMessaging.release.aar": "android/plugins/"
+    }
+  }
+}

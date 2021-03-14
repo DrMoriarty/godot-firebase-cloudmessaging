@@ -1,0 +1,11 @@
+[config]
+
+name="FirebaseCloudMessaging"
+binary_type="local"
+binary="FirebaseCloudMessaging.release.aar"
+
+[dependencies]
+
+local=[]
+remote=["com.google.firebase:firebase-messaging:21.0.1"]
+custom_maven_repos=["https://dl.bintray.com/mobilap/maven/"]
