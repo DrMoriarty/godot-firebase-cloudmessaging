@@ -56,7 +56,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
         }
 
-        FirebaseCloudMessaging.instance().set_message(remoteMessage);
+        if(FirebaseCloudMessaging.instance() != null) {
+            FirebaseCloudMessaging.instance().set_message(remoteMessage);
+        }
     }
 
 
@@ -72,7 +74,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onNewToken(String token) {
         Log.d(TAG, "Refreshed token: " + token);
-        FirebaseCloudMessaging.instance().set_token(token);
+        if(FirebaseCloudMessaging.instance() != null) {
+            FirebaseCloudMessaging.instance().set_token(token);
+        }
     }
 
 }
