@@ -1,0 +1,22 @@
+{
+  "name": "firebase-cloud-messaging",
+  "display_name": "FirebaseCloudMessaging",
+  "description": "",
+  "version": "1.0.0",
+  "license": "MIT",
+  "url": "https://github.com/YourGitHubName/your_github_repository",
+  "category": "misc",
+  "godot_version": "3.2.4",
+  "author": {
+    "name": "Your Name",
+    "url": "https://your_site.com",
+    "donate": "Url to your donate page, or remove if not needed"
+  },
+  "platform_ios": {
+    "files": {
+      "bin/firebase-cloud-messaging.debug.xcframework": "ios/plugins/firebase-cloud-messaging/firebase-cloud-messaging.debug.xcframework",
+      "bin/firebase-cloud-messaging.release.xcframework": "ios/plugins/firebase-cloud-messaging/firebase-cloud-messaging.release.xcframework",
+      "firebase-cloud-messaging.gdip": "ios/plugins/firebase-cloud-messaging/"
+    }
+  }
+}

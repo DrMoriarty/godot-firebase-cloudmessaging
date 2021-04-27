@@ -2,8 +2,8 @@
   "name": "firebase-cloud-messaging",
   "display_name": "Firebase Cloud Messaging",
   "description": "Firebase Cloud Messaging plugin. Recommended for use with FirebaseAnalytics.",
-  "version": "0.1.1",
-  "godot_version": "3.2.3",
+  "version": "0.2.0",
+  "godot_version": "3.3.0",
   "license": "MIT",
   "url": "https://github.com/DrMoriarty/godot-firebase-cloudmessaging",
   "category": "misc",
@@ -13,7 +13,7 @@
     "donate": "https://ko-fi.com/drmoriarty"
   },
   "dependencies": [
-    "firebase-core"
+    "firebase-core", "firebase-analytics"
   ],
   "files": {
     "scripts": "scripts"
@@ -25,6 +25,15 @@
     "files": {
       "android-plugin/FirebaseCloudMessaging.gdap": "android/plugins/",
       "android-plugin/build/outputs/aar/FirebaseCloudMessaging.release.aar": "android/plugins/"
+    }
+  },
+  "platform_ios": {
+    "files": {
+      "ios-plugin/bin/firebase-cloud-messaging.debug.xcframework": "ios/plugins/firebase-cloud-messaging/firebase-cloud-messaging.debug.xcframework",
+      "ios-plugin/bin/firebase-cloud-messaging.release.xcframework": "ios/plugins/firebase-cloud-messaging/firebase-cloud-messaging.release.xcframework",
+      "ios-plugin/firebase-cloud-messaging.gdip": "ios/plugins/firebase-cloud-messaging/",
+      "ios-plugin/FirebaseInstanceID.xcframework": "ios/plugins/firebase-cloud-messaging/FirebaseInstanceID.xcframework",
+      "ios-plugin/FirebaseMessaging.xcframework": "ios/plugins/firebase-cloud-messaging/FirebaseMessaging.xcframework"
     }
   }
 }

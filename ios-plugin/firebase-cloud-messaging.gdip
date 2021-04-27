@@ -1,0 +1,14 @@
+
+[config]
+name="FirebaseCloudMessaging"
+binary="firebase-cloud-messaging.xcframework"
+initialization="firebase_cloud_messaging_init"
+deinitialization="firebase_cloud_messaging_deinit"
+
+[dependencies]
+linked=["FirebaseInstanceID.xcframework", "FirebaseMessaging.xcframework"]
+embedded=[]
+system=[]
+capabilities=[]
+files=[]
+[plist]
