@@ -16,9 +16,9 @@
 
 #import "godot_plugin_class.h"
 
-static PluginClass *_instance = NULL;
-String PluginClass::_token;
-Dictionary PluginClass::_message;
+static FirebaseCloudMessaging *_instance = NULL;
+String FirebaseCloudMessaging::_token;
+Dictionary FirebaseCloudMessaging::_message;
 
 /*
  *  Types conversion methods CPP<->ObjC
@@ -212,15 +212,15 @@ static MyDelegate* _delegate = nil;
 /*
  * Bind plugin's public interface
  */
-void PluginClass::_bind_methods() {
-    ClassDB::bind_method(D_METHOD("get_message"), &PluginClass::get_message);
-    ClassDB::bind_method(D_METHOD("get_token"), &PluginClass::get_token);
+void FirebaseCloudMessaging::_bind_methods() {
+    ClassDB::bind_method(D_METHOD("get_message"), &FirebaseCloudMessaging::get_message);
+    ClassDB::bind_method(D_METHOD("get_token"), &FirebaseCloudMessaging::get_token);
     
     ADD_SIGNAL(MethodInfo("token"));
     ADD_SIGNAL(MethodInfo("message"));
 }
 
-PluginClass::PluginClass() {
+FirebaseCloudMessaging::FirebaseCloudMessaging() {
     NSLog(@"Initialize FirebaseCloudMessaging");
     _instance = this;
     _delegate = [MyDelegate new];
@@ -254,24 +254,24 @@ PluginClass::PluginClass() {
     }];
 }
 
-PluginClass::~PluginClass() {
+FirebaseCloudMessaging::~FirebaseCloudMessaging() {
     NSLog(@"Deinitialize FirebaseCloudMessaging");
 }
 
-String PluginClass::get_token() {
+String FirebaseCloudMessaging::get_token() {
     return _token;
 }
 
-Dictionary PluginClass::get_message() {
+Dictionary FirebaseCloudMessaging::get_message() {
     return _message;
 }
 
-void PluginClass::token_received(String t) {
+void FirebaseCloudMessaging::token_received(String t) {
     _token = t;
     emit_signal("token");
 }
 
-void PluginClass::message_received(Dictionary m) {
+void FirebaseCloudMessaging::message_received(Dictionary m) {
     _message = m;
     emit_signal("message");
 }

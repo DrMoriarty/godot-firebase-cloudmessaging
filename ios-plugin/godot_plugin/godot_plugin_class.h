@@ -10,8 +10,8 @@
 
 #include "core/object.h"
 
-class PluginClass : public Object {
-    GDCLASS(PluginClass, Object);
+class FirebaseCloudMessaging : public Object {
+    GDCLASS(FirebaseCloudMessaging, Object);
     
     static void _bind_methods();
     static String _token;
@@ -21,8 +21,8 @@ public:
     String get_token ();
     Dictionary get_message ();
 
-    PluginClass();
-    ~PluginClass();
+    FirebaseCloudMessaging();
+    ~FirebaseCloudMessaging();
     
     void token_received(String t);
     void message_received(Dictionary m);

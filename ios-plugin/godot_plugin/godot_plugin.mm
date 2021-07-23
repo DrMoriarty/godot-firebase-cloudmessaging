@@ -4,10 +4,10 @@
 #import "godot_plugin_class.h"
 #import "core/engine.h"
 
-PluginClass *plugin;
+FirebaseCloudMessaging *plugin;
 
 void firebase_cloud_messaging_init() {
-    plugin = memnew(PluginClass);
+    plugin = memnew(FirebaseCloudMessaging);
     Engine::get_singleton()->add_singleton(Engine::Singleton("FirebaseCloudMessaging", plugin));
 }
 
